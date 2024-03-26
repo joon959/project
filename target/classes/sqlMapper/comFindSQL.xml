@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ace.company">
+	<select id="companyFind" parameterType="String" resultType="com.ace.company.model.CompanyDTO">
+		select * from company where com_name like '%'||#{com_name}||'%'
+	</select>
+	<insert id="companyJoin" parameterType="com.ace.company.model.CompanyDTO">
+	insert into company values(
+		com_idx_idx.nextval,
+		#{com_name},
+		#{ceo},
+		#{position},
+		#{cr_num},
+		#{com_img}
+		)
+	</insert>
+	<select id="comCheck" parameterType="String" resultType="String">
+		select com_name from company where com_name = #{com_name}
+	</select>
+	<select id="comInfo" resultType="com.ace.company.model.CompanyDTO">
+		select 
+			* 
+		from
+			company
+		where com_idx=#{com_idx} 
+	</select>
+</mapper>

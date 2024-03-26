@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<mappers>
+		<mapper resource="sqlMapper/memberSQL.xml"/>
+		<mapper resource="sqlMapper/comFindSQL.xml"/>
+		<mapper resource="sqlMapper/company_eventSQL.xml"/>
+		<mapper resource="sqlMapper/company_newsSQL.xml"/>
+		<mapper resource="sqlMapper/client_telSQL.xml"/>
+		<mapper resource="sqlMapper/scheduleSQL.xml"/>
+    </mappers>
+</configuration>
